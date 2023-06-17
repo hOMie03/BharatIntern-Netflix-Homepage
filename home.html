@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Netflix</title>
+    <link rel="shortcut icon" href="images/Netflix logo 2.png" type="image/x-icon">
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/Netflix logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <a href="index.html"><img src="images/Netflix-avatar.png" class="profile" title="My Profile&#013;Click to log out"></a>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="images/poster.jpg" class="bg">
+        <div class="content">
+            <img src="images/name1.png" class="movieTitle">
+            <h4>
+                <span>2016</span>
+                <span><i>U/A 16+</i></span>
+                <span>4 Seasons</span>
+                <span>Sci-Fi</span>
+            </h4>
+            <p>When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+            <p><span>Starring:</span> Winona Ryder,David Harbour,Millie Bobby Brown<br><span>Creators:</span> The Duffer Brothers</p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo()"><img src="images/play.png">Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="trailer.mp4" controls="true"></video>
+        <img src="images/close.png" class="close" onclick="toggleVideo()">
+    </div>
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
